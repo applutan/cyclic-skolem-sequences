@@ -1,14 +1,21 @@
+# KCounterFast.g
+# Counts inequivalent chord diagrams for OEIS A390360 and A392247
+# 
+# Usage: 
+#   Read("KCounterFast.g");
+#   KCounterFast(4); # Returns 1
+#
+# Note: This is a reference implementation. For N >= 12, memory usage 
+# for OrbitsDomain becomes prohibitive.
+
 KCounterFast := function(n)
-    local nvx, pts, sols, dhg, Backtrack;
+    local nvx, sols, dhg, Backtrack;
     
-    # Calculate number of vertices (2n for even case, 4n+2 or similar for odd)
-    # NOTE: The input 'n' here is the number of CHORDS. 
-    # Adjust this logic if you pass the sequence index 'k' instead.
+    # n is the number of CHORDS.
     nvx := 2*n; 
-    
     sols := [];
     
-    # Define recursion locally so it captures 'sols' safely
+    # Define recursion locally to capture 'sols' safely
     Backtrack := function(mus, mln, cps, fnd)
         local x, y, l;
     
@@ -47,8 +54,6 @@ KCounterFast := function(n)
     end;
 
     # Launch recursion
-    # mus: boolean list of used vertices (size 2n)
-    # mln: boolean list of used chord lengths (size n)
     Backtrack(ListWithIdenticalEntries(nvx, false), ListWithIdenticalEntries(n, false), [], 0);
     
     if IsEmpty(sols) then return 0; fi;
@@ -56,5 +61,6 @@ KCounterFast := function(n)
     # Construct Dihedral Group D_2n acting on the set of pairs
     dhg := Group(PermList(Concatenation([2..nvx], [1])), Product(List([1..n], i -> (i, nvx-i+1))));
     
+    # Note: OrbitsDomain requires significant memory for n >= 12.
     return Size(OrbitsDomain(dhg, sols, OnSetsSets));
 end;
