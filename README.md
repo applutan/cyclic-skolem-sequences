@@ -19,30 +19,40 @@ Examples follow for $n=4,5,8,9,12$:
     <img src="hk08.png" alt="The only octagonal solution" width="200">
     <br>
     <em>The only octagonal solution</em>
+    <br>
+    <em>00231213</em>
 </p>
 
 <p align="center">
     <img src="hk10.png" alt="The two decagonal solutions" width="400">
     <br>
     <em>The two decagonal solutions</em>
+    <br>
+    <em>0023421314 0032412134</em>
 </p>
 
 <p align="center">
     <img src="hk16.png" alt="A pair of hexadecagonal solutions" width="400">
     <br>
     <em>A pair of hexadecagonal solutions</em>
+    <br>
+    <em>0027326534171546 0036151742652437</em>
 </p>
 
 <p align="center">
     <img src="hk18.png" alt="A pair of octadecagonal solutions" width="400">
     <br>
     <em>A pair of octadecagonal solutions</em>
+    <br>
+    <em>003845376425821617 004367238256171458</em>
 </p>
 
 <p align="center">
     <img src="hk24.png" alt="A pair of icositetragonal solutions" width="400">
     <br>
     <em>A pair of icositetragonal solutions</em>
+    <br>
+    <em>0015196ab734283247a9b586 00294257a6b8593761318ab4</em>
 </p>
 
 The condition $n \pmod 4 = 0, 1$ is necessary for the existence of such
