@@ -1,0 +1,10 @@
+[package]
+name = "cyclic-skolem-solver"
+version = "1.0.0"
+edition = "2021"
+authors = ["Paul / Jem Inni"]
+description = "High-performance multi-threaded solver for Cyclic Skolem Sequences (OEIS A390360, A392247)"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+rayon = "1.8"

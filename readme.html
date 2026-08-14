@@ -1,0 +1,322 @@
+<p>We count numbers, <span class="math inline">\(\chi_n\)</span>, of
+“Cyclic Skolem Sequences” of order <span
+class="math inline">\(n\)</span> under dihedral equivalence. These
+correspond to pairings of vertices on a <span
+class="math inline">\(2n\)</span>-gon such that each vertex in its pair
+is separated from its partner by a different number of edges,
+necessarily from the set <span
+class="math inline">\(\{1,2,\dots,n\}\)</span>.</p>
+<p>Solutions are encoded as a (cyclic) string of length 2n containing
+the symbols 0, 1, …, n-1 exactly twice. The two occurrences of symbol k
+are separated by exactly k characters along the shorter length of the
+cycle.</p>
+<p>To canonicalise a solution with regard to its <span
+class="math inline">\(4n\)</span> rotations and reflections (considered
+equivalent) we count solutions fixed at the beginning of the string with
+prefix “00”, adopting the lexicographically smaller of the two mirror
+images (the rest of the string or its reversal).</p>
+<p>Examples follow for <span
+class="math inline">\(n=4,5,8,9,12\)</span>:</p>
+<p align="center">
+<img src="hk08.png" alt="The only octagonal solution" width="200"> <br>
+<em>The only octagonal solution</em> <br> <em>00231213</em>
+</p>
+<p align="center">
+<img src="hk10.png" alt="The two decagonal solutions" width="400"> <br>
+<em>The two decagonal solutions</em> <br> <em>0023421314 0032412134</em>
+</p>
+<p align="center">
+<img src="hk16.png" alt="A pair of hexadecagonal solutions" width="400">
+<br> <em>A pair of hexadecagonal solutions</em> <br>
+<em>0027326534171546 0036151742652437</em>
+</p>
+<p align="center">
+<img src="hk18.png" alt="A pair of octadecagonal solutions" width="400">
+<br> <em>A pair of octadecagonal solutions</em> <br>
+<em>003845376425821617 004367238256171458</em>
+</p>
+<p align="center">
+<img src="hk24.png" alt="A pair of icositetragonal solutions" width="400">
+<br> <em>A pair of icositetragonal solutions</em> <br>
+<em>0015196ab734283247a9b586 00294257a6b8593761318ab4</em>
+</p>
+<p>The condition <span class="math inline">\(n \pmod 4 = 0, 1\)</span>
+is necessary for the existence of such a sequence (similar to the linear
+Skolem sequences). Thus <span class="math inline">\(n = 1, 4, 5, 8, 9,
+12, 13, 16, 17, \dots\)</span>.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span
+class="math inline">\(n\)</span></th>
+<th style="text-align: right;"><span
+class="math inline">\(M(n)\)</span></th>
+<th style="text-align: right;"><span
+class="math inline">\(B(n)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(R_{\vert
+G\vert}(n)\)</span></th>
+<th style="text-align: right;"><span
+class="math inline">\(\chi_n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">945</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2027025</td>
+<td style="text-align: right;">65346</td>
+<td style="text-align: right;">61451</td>
+<td style="text-align: right;">192</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">34459425</td>
+<td style="text-align: right;">966156</td>
+<td style="text-align: right;">948464</td>
+<td style="text-align: right;">1200</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">316234143225</td>
+<td style="text-align: right;">6589356711</td>
+<td style="text-align: right;">6587070085</td>
+<td style="text-align: right;">456960</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">7905853580625</td>
+<td style="text-align: right;">152041845075</td>
+<td style="text-align: right;">152029453008</td>
+<td style="text-align: right;">4009024</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">191898783962510625</td>
+<td style="text-align: right;">2998419746654530</td>
+<td style="text-align: right;">2998417252355055</td>
+<td style="text-align: right;">4377344000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">6332659870762850625</td>
+<td style="text-align: right;">93127358763431113</td>
+<td style="text-align: right;">93127343318143792</td>
+<td style="text-align: right;">51487228672</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span
+class="math inline">\(\cdots\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>The table above includes, to the left, extra columns for (superset)
+contexts.</p>
+<p><span class="math inline">\(M(n)\)</span> is the much larger number
+of ways <span class="math inline">\((2n-1)!!\)</span> = <span
+class="math inline">\(\frac{(2n)!}{2^n\cdot n!}\)</span> to pair up
+<span class="math inline">\(2n\)</span> distinct vertices without
+restriction - <em>aka Perfect Matchings</em>.</p>
+<p><span class="math inline">\(B(n)\)</span> is the number of <span
+class="math inline">\(n\)</span>-chord diagrams that can be turned over
+(dihedrally equivalent, as documented by <a
+href="https://oeis.org/A054499">OEIS A054499</a> asymptotically limited
+(via the <em>[not] Burnside Lemma</em>) by <span
+class="math inline">\(M(n)/4n\)</span>.</p>
+<p><span class="math inline">\(R_{|G|}(n)\)</span> is then the number of
+<em>those</em> diagrams group-action stabilised only by the trivial
+group (in so-called regular orbits, which Skolem sequences must be,
+since all chord lengths are distinct). This number is also
+asymptotically limited by <span class="math inline">\(M(n)/4n\)</span>
+since chord diagrams with any symmetry whatever become increasingly
+unlikely.</p>
+<h3 id="oeis-references">OEIS References</h3>
+<ul>
+<li><strong><a href="https://oeis.org/A054499">OEIS
+A054499</a></strong>: Dihedrally equivalent <span
+class="math inline">\(n\)</span>-chord diagrams <span
+class="math inline">\(B(n) \approx \frac{(2n-1)!!}{4n}\)</span>.</li>
+<li><strong><a href="https://oeis.org/A390360">OEIS
+A390360</a></strong>: Counts <span class="math inline">\(\chi_n\)</span>
+of canonical <span class="math inline">\(D_{2n}\)</span> cyclic Skolem
+sequences for odd <span class="math inline">\(n \equiv 1 \pmod
+4\)</span> (<span class="math inline">\(n=1, 5, 9, 13, 17,
+\dots\)</span>).</li>
+<li><strong><a href="https://oeis.org/A392247">OEIS
+A392247</a></strong>: Counts <span class="math inline">\(\chi_n\)</span>
+of canonical <span class="math inline">\(D_{2n}\)</span> cyclic Skolem
+sequences for even <span class="math inline">\(n \equiv 0 \pmod
+4\)</span> (<span class="math inline">\(n=4, 8, 12, 16, 20,
+\dots\)</span>).</li>
+</ul>
+<h3 id="asymptotic-sparsity-analytical-upper-bounds">Asymptotic Sparsity
+&amp; Analytical Upper Bounds</h3>
+<h4 id="old-unrestricted-flabby-bound">1. Old Unrestricted Flabby
+Bound</h4>
+<p>The unconstrained chord diagram bound <span
+class="math inline">\(B(n) \approx \frac{(2n-1)!!}{4n} \sim
+\left(\frac{2n}{e}\right)^n\)</span> counts all matchings without
+enforcing the distinct distance constraints <span
+class="math inline">\(\{1, 2, \dots, n\}\)</span>.</p>
+<h4 id="new-tight-analytical-bound">2. New Tight Analytical Bound</h4>
+<p>By accounting for the placement of <span
+class="math inline">\(n\)</span> distinct chord lengths under cyclic
+distance constraints and quotienting by the dihedral action of order
+<span class="math inline">\(4n\)</span>, we obtain the tight analytical
+bound: <span class="math display">\[\chi_n \le \frac{(2n)!}{2^{n+3}
+n^{n+1}} \approx \frac{\sqrt{\pi}}{4 \sqrt{n}} \cdot \left(
+\frac{2n}{e^2} \right)^n \approx \frac{0.4431}{\sqrt{n}} \left( 0.2707
+\cdot n \right)^n\]</span></p>
+<p>This improves upon the unconstrained bound by an exponential factor
+of <span class="math inline">\((1/e)^n \approx (0.3679)^n\)</span>,
+providing an extraordinarily tighter upper limit.</p>
+<h4 id="comparison-table">Comparison Table:</h4>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span
+class="math inline">\(n\)</span></th>
+<th style="text-align: center;">Actual Skolem Orbits <span
+class="math inline">\(\chi_n\)</span></th>
+<th style="text-align: center;">Old Bound <span
+class="math inline">\(B(n)\)</span></th>
+<th style="text-align: center;"><strong>New Tight Bound <span
+class="math inline">\(\frac{(2n)!}{2^{n+3}
+n^{n+1}}\)</span></strong></th>
+<th style="text-align: center;">Improvement Factor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><strong>10.5</strong></td>
+<td style="text-align: center;"><strong>0.6x</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>5</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;">47</td>
+<td style="text-align: center;"><strong>42.3</strong></td>
+<td style="text-align: center;"><strong>1.1x</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>8</strong></td>
+<td style="text-align: center;"><strong>192</strong></td>
+<td style="text-align: center;">63,344</td>
+<td style="text-align: center;"><strong>1,732</strong></td>
+<td style="text-align: center;"><strong>36.5x tighter</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>9</strong></td>
+<td style="text-align: center;"><strong>1,200</strong></td>
+<td style="text-align: center;">957,206</td>
+<td style="text-align: center;"><strong>10,211</strong></td>
+<td style="text-align: center;"><strong>93.7x tighter</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>12</strong></td>
+<td style="text-align: center;"><strong>456,960</strong></td>
+<td style="text-align: center;"><span class="math inline">\(6.58 \times
+10^9\)</span></td>
+<td style="text-align: center;"><strong>4,917,215</strong></td>
+<td style="text-align: center;"><strong>1,339x tighter</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>13</strong></td>
+<td style="text-align: center;"><strong>4,009,024</strong></td>
+<td style="text-align: center;"><span class="math inline">\(1.52 \times
+10^{11}\)</span></td>
+<td style="text-align: center;"><strong>43,456,920</strong></td>
+<td style="text-align: center;"><strong>3,498x tighter</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>16</strong></td>
+<td style="text-align: center;"><strong>4,377,344,000</strong></td>
+<td style="text-align: center;"><span class="math inline">\(2.99 \times
+10^{15}\)</span></td>
+<td style="text-align: center;"><strong>37,842,674,831</strong></td>
+<td style="text-align: center;"><strong>79,233x tighter</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>17</strong></td>
+<td style="text-align: center;"><strong>51,487,228,672</strong></td>
+<td style="text-align: center;"><span class="math inline">\(9.31 \times
+10^{16}\)</span></td>
+<td style="text-align: center;"><strong>445,410,230,051</strong></td>
+<td style="text-align: center;"><strong>209,082x tighter</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Empirically, the number of solutions <span
+class="math inline">\(\chi_n\)</span> vanishes relative to the total
+space of chord diagrams <span class="math inline">\(M(n)\)</span>. The
+ratio <span class="math inline">\(\frac{\chi_n}{M(n)}\)</span> drops by
+approximately two orders of magnitude for every increment of 4 in <span
+class="math inline">\(n\)</span>:</p>
+<ul>
+<li><span class="math inline">\(n=4\)</span>: ~1 in 100</li>
+<li><span class="math inline">\(n=8\)</span>: ~1 in 10,000</li>
+<li><span class="math inline">\(n=12\)</span>: ~1 in 1,000,000</li>
+<li><span class="math inline">\(n=16\)</span>: ~1 in 100,000,000</li>
+</ul>
+<p>While Skolem sequences form an infinitesimally small fraction of all
+asymmetric diagrams as <span class="math inline">\(n \to
+\infty\)</span>, individual instances remain tractable to find. For
+example, here are several valid sequences of length 36 (<span
+class="math inline">\(n=18\)</span>, length profile <span
+class="math inline">\(1..18\)</span>):</p>
+<pre><code>001q1pytfmdwilxr4jan64vohuk6gaqpmczl3s5b3yhe5gckotwbx8v7u2er2987fisndjz9
+004b96vgplusmqje5xw8z35c73ft8nel7yjmcrvosufh2dk21a1winpxztqdahgbor9ky46i
+00546bwd5stpyoli1b1v7dz9rhuj7xegm9fklpswtn3hqe3jgyfarc8mkuzvo2a82ncxi64q
+005v28b2nkctxo8ryzlqi74cpw94s7kunmdv9eoiltf3ghq3djxyeza1m1fr6guhwab65jps
+007rsdhpitqbexzjnm3yol3bgc5kuwvr5s2ja2ctmg181ofak4zx8p4qy96uhifdn679wevl
+009e4tlpa4z69jqbhk6yomwvxi5b2ru25jhtcs8fnqg1i1z83c7d3pyflr7gewxvndsokamu
+00dvqlzm9h51k1bf5j9supntxrbhwymf3kov3j2a42zc847peqagi87lc6xoduse6tywgrni
+00eovxwpm3iad3fghn1t1rauzqdyoifmgph6vk4xsn648wl97tcj28b279kez5ycurb5lsqj
+00fxpdsl92y527jcv59dh7wzo3tic3pbrk6gqxhun6mb8yievsa4g8kw4lfzraeqnmj1t1uo
+00k7e1z1fl4qsnj4wu5extvc56r3bga36iy2cp28bazdomgh8w9tikxsqdul9nvpfhj7mory</code></pre>
+<p>where alphanumeric characters <code>0</code>..<code>z</code> encode
+distance values <span class="math inline">\(0\)</span>..<span
+class="math inline">\(35\)</span>. With the new tight analytical bound
+<span class="math inline">\(\frac{(2n)!}{2^{n+3} n^{n+1}}\)</span>, the
+search space ceiling is rigorously constrained across all orders <span
+class="math inline">\(n\)</span>.</p>

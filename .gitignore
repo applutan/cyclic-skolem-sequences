@@ -1,0 +1,7 @@
+/solver/target/
+PROJECT_CONTEXT.md
+*.aux
+*.log
+*.out
+*.toc
+
