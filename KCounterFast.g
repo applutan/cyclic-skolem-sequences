@@ -52,6 +52,12 @@ KCounterFast := function(arg)
             return [];
         fi;
     fi;
+    if n = 1 then
+        if format_type = "count" then return 1;
+        elif format_type = "base36" then return ["00"];
+        else return [[[1, 2]]];
+        fi;
+    fi;
     
     nvx := 2 * n; 
     base36_chars := "0123456789abcdefghijklmnopqrstuvwxyz";
