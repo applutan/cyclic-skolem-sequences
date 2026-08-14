@@ -138,5 +138,5 @@ While Skolem sequences form an infinitesimally small fraction of all asymmetric 
     00fxpdsl92y527jcv59dh7wzo3tic3pbrk6gqxhun6mb8yievsa4g8kw4lfzraeqnmj1t1uo
     00k7e1z1fl4qsnj4wu5extvc56r3bga36iy2cp28bazdomgh8w9tikxsqdul9nvpfhj7mory
 
-where alphanumeric characters `0`..`z` encode distance values $0$..$35$. With the new tight analytical bound $\frac{(2n)!}{2^{n+3} n^{n+1}}$, the search space ceiling is rigorously constrained across all orders $n$.
+where alphanumeric characters `0`..`z` encode distance values $0\dots 35$. With the new tight analytical bound $\frac{(2n)!}{2^{n+3} n^{n+1}}$, the search space ceiling is rigorously constrained across all orders $n$.
 
