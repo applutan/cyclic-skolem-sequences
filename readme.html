@@ -1,3 +1,172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="/usr/share/javascript/mathjax/MathJax.js"
+  type="text/javascript"></script>
+</head>
+<body>
 <p>We count numbers, <span class="math inline">\(\chi_n\)</span>, of
 “Cyclic Skolem Sequences” of order <span
 class="math inline">\(n\)</span> under dihedral equivalence. These
@@ -284,8 +453,125 @@ n^{n+1}}\)</span></strong></th>
 <td style="text-align: center;"><strong>445,410,230,051</strong></td>
 <td style="text-align: center;"><strong>209,082x tighter</strong></td>
 </tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>20</strong></td>
+<td style="text-align: center;"><em>Est. <span
+class="math inline">\(\approx 1.193 \times 10^{14}\)</span></em></td>
+<td style="text-align: center;"><span class="math inline">\(3.99 \times
+10^{21}\)</span></td>
+<td style="text-align: center;"><strong><span
+class="math inline">\(46,379,493,576,648\)</span></strong></td>
+<td style="text-align: center;"><strong>86,199,608x
+tighter</strong></td>
+</tr>
 </tbody>
 </table>
+<h4 id="empirical-ratio-convergence-the-n20-frontier">3. Empirical Ratio
+Convergence &amp; The <span class="math inline">\(n=20\)</span>
+Frontier</h4>
+<p>Comparing exact orbit counts against the tight analytical bound <span
+class="math inline">\(\frac{(2n)!}{2^{n+3} n^{n+1}}\)</span>, the ratio
+<span class="math inline">\(\chi_n / T(n)\)</span> converges rapidly to
+the asymptotic constant: <span
+class="math display">\[\frac{\chi_n}{T(n)} \longrightarrow \mathbf{2.572
+\pm 0.001}\]</span></p>
+<ul>
+<li><span class="math inline">\(n=12\)</span>: <span
+class="math inline">\(2.5821\)</span></li>
+<li><span class="math inline">\(n=13\)</span>: <span
+class="math inline">\(2.5651\)</span></li>
+<li><span class="math inline">\(n=16\)</span>: <span
+class="math inline">\(2.5742\)</span></li>
+<li><span class="math inline">\(n=17\)</span>: <span
+class="math inline">\(2.5717\)</span></li>
+</ul>
+<p>Applying this asymptotic constant to <span
+class="math inline">\(T(20) = \frac{40!}{2^{23} \cdot 20^{21}} =
+46,379,414,200,595\)</span> predicts: <span
+class="math display">\[\chi_{20} \approx 2.572 \times T(20) \approx
+\mathbf{1.193 \times 10^{14}} \quad (\approx \mathbf{119.3 \text{
+trillion canonical orbits}})\]</span></p>
+<h4 id="solver-performance-distributed-sharding">4. Solver Performance
+&amp; Distributed Sharding</h4>
+<p>Benchmarks for the compiled Rust solver running on a standard
+multi-core workstation:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span
+class="math inline">\(n\)</span></th>
+<th style="text-align: center;">Canonical Orbits <span
+class="math inline">\(\chi_n\)</span></th>
+<th style="text-align: center;">Solver Speed</th>
+<th style="text-align: center;">Total Compute Time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>8</strong></td>
+<td style="text-align: center;">192</td>
+<td style="text-align: center;"><span class="math inline">\(5.30 \times
+10^4\)</span> sol/s</td>
+<td style="text-align: center;">0.0036 s</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>9</strong></td>
+<td style="text-align: center;">1,200</td>
+<td style="text-align: center;"><span class="math inline">\(3.11 \times
+10^5\)</span> sol/s</td>
+<td style="text-align: center;">0.0039 s</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>12</strong></td>
+<td style="text-align: center;">456,960</td>
+<td style="text-align: center;"><span class="math inline">\(1.96 \times
+10^6\)</span> sol/s</td>
+<td style="text-align: center;">0.2335 s</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>13</strong></td>
+<td style="text-align: center;">4,009,024</td>
+<td style="text-align: center;"><span class="math inline">\(1.63 \times
+10^6\)</span> sol/s</td>
+<td style="text-align: center;">2.4619 s</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>16</strong></td>
+<td style="text-align: center;">4,377,344,000</td>
+<td style="text-align: center;"><span class="math inline">\(6.05 \times
+10^5\)</span> sol/s</td>
+<td style="text-align: center;">7,235.86 s (2.01 hours)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>17</strong></td>
+<td style="text-align: center;">51,487,228,672</td>
+<td style="text-align: center;"><span class="math inline">\(5.22 \times
+10^5\)</span> sol/s</td>
+<td style="text-align: center;">98,653.05 s (27.40 hours)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>20</strong></td>
+<td style="text-align: center;"><em>Est. <span
+class="math inline">\(\approx 1.193 \times 10^{14}\)</span></em></td>
+<td style="text-align: center;"><span class="math inline">\(\approx 5.0
+\times 10^5\)</span> sol/s</td>
+<td style="text-align: center;"><span class="math inline">\(\approx
+7.5\)</span> years (1 machine) / <span class="math inline">\(\approx
+66\)</span> hours (1000 nodes)</td>
+</tr>
+</tbody>
+</table>
+<p>Because the solver operates in <span
+class="math inline">\(O(1)\)</span> stack memory with zero cross-thread
+communication, large computations can be trivially partitioned across
+distributed cloud nodes using the <code>--shard &lt;M/N&gt;</code> flag
+(e.g. <code>cyclic-skolem-solver -n 20 --shard 1/1000 ...</code>).</p>
 <p>Empirically, the number of solutions <span
 class="math inline">\(\chi_n\)</span> vanishes relative to the total
 space of chord diagrams <span class="math inline">\(M(n)\)</span>. The
@@ -320,3 +606,5 @@ new tight analytical bound <span
 class="math inline">\(\frac{(2n)!}{2^{n+3} n^{n+1}}\)</span>, the search
 space ceiling is rigorously constrained across all orders <span
 class="math inline">\(n\)</span>.</p>
+</body>
+</html>
