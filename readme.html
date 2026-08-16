@@ -161,58 +161,129 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="/usr/share/javascript/mathjax/MathJax.js"
   type="text/javascript"></script>
 </head>
 <body>
+<h1 id="cyclic-skolem-sequences">Cyclic Skolem Sequences</h1>
 <p>We count numbers, <span class="math inline">\(\chi_n\)</span>, of
 “Cyclic Skolem Sequences” of order <span
 class="math inline">\(n\)</span> under dihedral equivalence. These
 correspond to pairings of vertices on a <span
 class="math inline">\(2n\)</span>-gon such that each vertex in its pair
 is separated from its partner by a different number of edges,
-necessarily from the set <span
-class="math inline">\(\{1,2,\dots,n\}\)</span>.</p>
-<p>Solutions are encoded as a (cyclic) string of length 2n containing
-the symbols 0, 1, …, n-1 exactly twice. The two occurrences of symbol k
-are separated by exactly k characters along the shorter length of the
-cycle.</p>
-<p>To canonicalise a solution with regard to its <span
+necessarily from the set <span class="math inline">\(\{1, 2, \dots,
+n\}\)</span>.</p>
+<p>Solutions are encoded as a (cyclic) string of length <span
+class="math inline">\(2n\)</span> containing the symbols <span
+class="math inline">\(0, 1, \dots, n-1\)</span> exactly twice. The two
+occurrences of symbol <span class="math inline">\(k\)</span> are
+separated by exactly <span class="math inline">\(k\)</span> characters
+along the shorter length of the cycle.</p>
+<p>To canonicalize a solution with regard to its <span
 class="math inline">\(4n\)</span> rotations and reflections (considered
-equivalent) we count solutions fixed at the beginning of the string with
-prefix “00”, adopting the lexicographically smaller of the two mirror
-images (the rest of the string or its reversal).</p>
-<p>Examples follow for <span
-class="math inline">\(n=4,5,8,9,12\)</span>:</p>
+equivalent), we count solutions fixed at the beginning of the string
+with prefix <code>"00"</code>, adopting the lexicographically smaller of
+the two mirror images (the rest of the string or its reversal).</p>
+<h2 id="examples-for-n4-5-8-9-12">Examples for <span
+class="math inline">\(n=4, 5, 8, 9, 12\)</span></h2>
 <p align="center">
 <img src="hk08.png" alt="The only octagonal solution" width="200"> <br>
-<em>The only octagonal solution</em> <br> <em>00231213</em>
+<em>The only octagonal solution (n=4): 00231213</em>
 </p>
 <p align="center">
 <img src="hk10.png" alt="The two decagonal solutions" width="400"> <br>
-<em>The two decagonal solutions</em> <br> <em>0023421314 0032412134</em>
+<em>The two decagonal solutions (n=5): 0023421314 0032412134</em>
 </p>
 <p align="center">
 <img src="hk16.png" alt="A pair of hexadecagonal solutions" width="400">
-<br> <em>A pair of hexadecagonal solutions</em> <br>
-<em>0027326534171546 0036151742652437</em>
+<br> <em>A pair of hexadecagonal solutions (n=8): 0027326534171546
+0036151742652437</em>
 </p>
 <p align="center">
 <img src="hk18.png" alt="A pair of octadecagonal solutions" width="400">
-<br> <em>A pair of octadecagonal solutions</em> <br>
-<em>003845376425821617 004367238256171458</em>
+<br> <em>A pair of octadecagonal solutions (n=9): 003845376425821617
+004367238256171458</em>
 </p>
 <p align="center">
 <img src="hk24.png" alt="A pair of icositetragonal solutions" width="400">
-<br> <em>A pair of icositetragonal solutions</em> <br>
-<em>0015196ab734283247a9b586 00294257a6b8593761318ab4</em>
+<br> <em>A pair of icositetragonal solutions (n=12):
+0015196ab734283247a9b586 00294257a6b8593761318ab4</em>
 </p>
-<p>The condition <span class="math inline">\(n \pmod 4 = 0, 1\)</span>
-is necessary for the existence of such a sequence (similar to the linear
-Skolem sequences). Thus <span class="math inline">\(n = 1, 4, 5, 8, 9,
-12, 13, 16, 17, \dots\)</span>.</p>
+<hr />
+<h2 id="parity-invariant-orbit-census">Parity Invariant &amp; Orbit
+Census</h2>
+<p>The condition <span class="math inline">\(n \equiv 0, 1 \pmod
+4\)</span> is necessary for the existence of such a sequence (similar to
+linear Skolem sequences). Thus valid orders are <span
+class="math inline">\(n = 1, 4, 5, 8, 9, 12, 13, 16, 17, 20,
+\dots\)</span>.</p>
 <table>
 <colgroup>
 <col style="width: 20%" />
@@ -225,151 +296,132 @@ Skolem sequences). Thus <span class="math inline">\(n = 1, 4, 5, 8, 9,
 <tr class="header">
 <th style="text-align: right;"><span
 class="math inline">\(n\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(M(n)\)</span>
+(All Matchings)</th>
+<th style="text-align: right;"><span class="math inline">\(B(n)\)</span>
+(OEIS A054499)</th>
 <th style="text-align: right;"><span
-class="math inline">\(M(n)\)</span></th>
+class="math inline">\(R_{|G|}(n)\)</span> (Asymmetric)</th>
 <th style="text-align: right;"><span
-class="math inline">\(B(n)\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(R_{\vert
-G\vert}(n)\)</span></th>
-<th style="text-align: right;"><span
-class="math inline">\(\chi_n\)</span></th>
+class="math inline">\(\chi_n\)</span> (Skolem Orbits)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1</td>
+<td style="text-align: right;"><strong>1</strong></td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">-</td>
-<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">4</td>
+<td style="text-align: right;"><strong>4</strong></td>
 <td style="text-align: right;">105</td>
 <td style="text-align: right;">17</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">5</td>
+<td style="text-align: right;"><strong>5</strong></td>
 <td style="text-align: right;">945</td>
 <td style="text-align: right;">79</td>
 <td style="text-align: right;">24</td>
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">2027025</td>
-<td style="text-align: right;">65346</td>
-<td style="text-align: right;">61451</td>
+<td style="text-align: right;"><strong>8</strong></td>
+<td style="text-align: right;">2,027,025</td>
+<td style="text-align: right;">65,346</td>
+<td style="text-align: right;">61,451</td>
 <td style="text-align: right;">192</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">34459425</td>
-<td style="text-align: right;">966156</td>
-<td style="text-align: right;">948464</td>
-<td style="text-align: right;">1200</td>
+<td style="text-align: right;"><strong>9</strong></td>
+<td style="text-align: right;">34,459,425</td>
+<td style="text-align: right;">966,156</td>
+<td style="text-align: right;">948,464</td>
+<td style="text-align: right;">1,200</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">316234143225</td>
-<td style="text-align: right;">6589356711</td>
-<td style="text-align: right;">6587070085</td>
-<td style="text-align: right;">456960</td>
+<td style="text-align: right;"><strong>12</strong></td>
+<td style="text-align: right;">316,234,143,225</td>
+<td style="text-align: right;">6,589,356,711</td>
+<td style="text-align: right;">6,587,070,085</td>
+<td style="text-align: right;">456,960</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">7905853580625</td>
-<td style="text-align: right;">152041845075</td>
-<td style="text-align: right;">152029453008</td>
-<td style="text-align: right;">4009024</td>
+<td style="text-align: right;"><strong>13</strong></td>
+<td style="text-align: right;">7,905,853,580,625</td>
+<td style="text-align: right;">152,041,845,075</td>
+<td style="text-align: right;">152,029,453,008</td>
+<td style="text-align: right;">4,009,024</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">191898783962510625</td>
-<td style="text-align: right;">2998419746654530</td>
-<td style="text-align: right;">2998417252355055</td>
-<td style="text-align: right;">4377344000</td>
+<td style="text-align: right;"><strong>16</strong></td>
+<td style="text-align: right;">191,898,783,962,510,625</td>
+<td style="text-align: right;">2,998,419,746,654,530</td>
+<td style="text-align: right;">2,998,417,252,355,055</td>
+<td style="text-align: right;">4,377,344,000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">17</td>
-<td style="text-align: right;">6332659870762850625</td>
-<td style="text-align: right;">93127358763431113</td>
-<td style="text-align: right;">93127343318143792</td>
-<td style="text-align: right;">51487228672</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;"><span
-class="math inline">\(\cdots\)</span></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>17</strong></td>
+<td style="text-align: right;">6,332,659,870,762,850,625</td>
+<td style="text-align: right;">93,127,358,763,431,113</td>
+<td style="text-align: right;">93,127,343,318,143,792</td>
+<td style="text-align: right;">51,487,228,672</td>
 </tr>
 </tbody>
 </table>
-<p>The table above includes, to the left, extra columns for (superset)
-contexts.</p>
-<p><span class="math inline">\(M(n)\)</span> is the much larger number
-of ways <span class="math inline">\((2n-1)!!\)</span> = <span
-class="math inline">\(\frac{(2n)!}{2^n\cdot n!}\)</span> to pair up
-<span class="math inline">\(2n\)</span> distinct vertices without
-restriction - <em>aka Perfect Matchings</em>.</p>
-<p><span class="math inline">\(B(n)\)</span> is the number of <span
-class="math inline">\(n\)</span>-chord diagrams that can be turned over
-(dihedrally equivalent, as documented by <a
-href="https://oeis.org/A054499">OEIS A054499</a> asymptotically limited
-(via the <em>[not] Burnside Lemma</em>) by <span
-class="math inline">\(M(n)/4n\)</span>.</p>
-<p><span class="math inline">\(R_{|G|}(n)\)</span> is then the number of
-<em>those</em> diagrams group-action stabilised only by the trivial
-group (in so-called regular orbits, which Skolem sequences must be,
-since all chord lengths are distinct). This number is also
-asymptotically limited by <span class="math inline">\(M(n)/4n\)</span>
-since chord diagrams with any symmetry whatever become increasingly
-unlikely.</p>
+<h3 id="context-of-columns">Context of Columns:</h3>
+<ul>
+<li><span class="math inline">\(M(n) = (2n-1)!! = \frac{(2n)!}{2^n
+n!}\)</span>: Total unrestricted perfect matchings on <span
+class="math inline">\(2n\)</span> vertices.</li>
+<li><span class="math inline">\(B(n) \approx
+\frac{(2n-1)!!}{4n}\)</span>: Number of dihedrally inequivalent chord
+diagrams (<a href="https://oeis.org/A054499">OEIS A054499</a>).</li>
+<li><span class="math inline">\(R_{|G|}(n)\)</span>: Number of chord
+diagrams with trivial stabilizer (regular orbits of size <span
+class="math inline">\(|D_{2n}| = 4n\)</span>). Skolem sequences are
+strictly a subset of regular orbits because distinct chord lengths
+preclude non-trivial rotational or reflectional symmetry.</li>
+</ul>
 <h3 id="oeis-references">OEIS References</h3>
 <ul>
 <li><strong><a href="https://oeis.org/A054499">OEIS
 A054499</a></strong>: Dihedrally equivalent <span
-class="math inline">\(n\)</span>-chord diagrams <span
-class="math inline">\(B(n) \approx \frac{(2n-1)!!}{4n}\)</span>.</li>
+class="math inline">\(n\)</span>-chord diagrams.</li>
 <li><strong><a href="https://oeis.org/A390360">OEIS
-A390360</a></strong>: Counts <span class="math inline">\(\chi_n\)</span>
-of canonical <span class="math inline">\(D_{2n}\)</span> cyclic Skolem
-sequences for odd <span class="math inline">\(n \equiv 1 \pmod
-4\)</span> (<span class="math inline">\(n=1, 5, 9, 13, 17,
-\dots\)</span>).</li>
+A390360</a></strong>: Canonical <span
+class="math inline">\(D_{2n}\)</span> cyclic Skolem sequences for odd
+<span class="math inline">\(n \equiv 1 \pmod 4\)</span> (<span
+class="math inline">\(n=1, 5, 9, 13, 17, \dots\)</span>).</li>
 <li><strong><a href="https://oeis.org/A392247">OEIS
-A392247</a></strong>: Counts <span class="math inline">\(\chi_n\)</span>
-of canonical <span class="math inline">\(D_{2n}\)</span> cyclic Skolem
-sequences for even <span class="math inline">\(n \equiv 0 \pmod
-4\)</span> (<span class="math inline">\(n=4, 8, 12, 16, 20,
-\dots\)</span>).</li>
+A392247</a></strong>: Canonical <span
+class="math inline">\(D_{2n}\)</span> cyclic Skolem sequences for even
+<span class="math inline">\(n \equiv 0 \pmod 4\)</span> (<span
+class="math inline">\(n=4, 8, 12, 16, 20, \dots\)</span>).</li>
 </ul>
-<h3 id="asymptotic-sparsity-analytical-upper-bounds">Asymptotic Sparsity
-&amp; Analytical Upper Bounds</h3>
-<h4 id="old-unrestricted-flabby-bound">1. Old Unrestricted Flabby
-Bound</h4>
-<p>The unconstrained chord diagram bound <span
-class="math inline">\(B(n) \approx \frac{(2n-1)!!}{4n} \sim
-\left(\frac{2n}{e}\right)^n\)</span> counts all matchings without
-enforcing the distinct distance constraints <span
-class="math inline">\(\{1, 2, \dots, n\}\)</span>.</p>
-<h4 id="new-tight-analytical-bound">2. New Tight Analytical Bound</h4>
-<p>By accounting for the placement of <span
-class="math inline">\(n\)</span> distinct chord lengths under cyclic
-distance constraints and quotienting by the dihedral action of order
-<span class="math inline">\(4n\)</span>, we obtain the tight analytical
-bound: <span class="math display">\[\chi_n \le \frac{(2n)!}{2^{n+3}
-n^{n+1}} \approx \frac{\sqrt{\pi}}{4 \sqrt{n}} \cdot \left(
-\frac{2n}{e^2} \right)^n \approx \frac{0.4431}{\sqrt{n}} \left( 0.2707
-\cdot n \right)^n\]</span></p>
+<hr />
+<h2 id="asymptotic-bounds-analytical-breakthroughs">Asymptotic Bounds
+&amp; Analytical Breakthroughs</h2>
+<h3 id="old-unrestricted-matching-bound">1. Old Unrestricted Matching
+Bound</h3>
+<p><span class="math display">\[B(n) \approx \frac{(2n-1)!!}{4n} \sim
+\left(\frac{2n}{e}\right)^n\]</span> Counts all chord matchings without
+enforcing distinct distance constraints <span class="math inline">\(\{1,
+2, \dots, n\}\)</span>.</p>
+<h3 id="tight-analytical-upper-bound">2. Tight Analytical Upper
+Bound</h3>
+<p>Accounting for distinct cyclic distance constraints and quotienting
+by the dihedral action of order <span class="math inline">\(4n\)</span>
+yields the tight analytical bound: <span class="math display">\[\chi_n
+\le \frac{(2n)!}{2^{n+3} n^{n+1}} \approx \frac{\sqrt{\pi}}{4 \sqrt{n}}
+\cdot \left( \frac{2n}{e^2} \right)^n \approx \frac{0.4431}{\sqrt{n}}
+\left( 0.2707 \cdot n \right)^n\]</span></p>
 <p>This improves upon the unconstrained bound by an exponential factor
-of <span class="math inline">\((1/e)^n \approx (0.3679)^n\)</span>,
-providing an extraordinarily tighter upper limit.</p>
-<h4 id="comparison-table">Comparison Table:</h4>
+of <span class="math inline">\((1/e)^n \approx (0.3679)^n\)</span>.</p>
+<h3 id="comparative-bound-table">Comparative Bound Table:</h3>
 <table>
 <colgroup>
 <col style="width: 20%" />
@@ -386,9 +438,8 @@ class="math inline">\(n\)</span></th>
 class="math inline">\(\chi_n\)</span></th>
 <th style="text-align: center;">Old Bound <span
 class="math inline">\(B(n)\)</span></th>
-<th style="text-align: center;"><strong>New Tight Bound <span
-class="math inline">\(\frac{(2n)!}{2^{n+3}
-n^{n+1}}\)</span></strong></th>
+<th style="text-align: center;">Tight Bound <span
+class="math inline">\(\frac{(2n)!}{2^{n+3} n^{n+1}}\)</span></th>
 <th style="text-align: center;">Improvement Factor</th>
 </tr>
 </thead>
@@ -455,24 +506,23 @@ n^{n+1}}\)</span></strong></th>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"><strong>20</strong></td>
-<td style="text-align: center;"><em>Est. <span
-class="math inline">\(\approx 1.193 \times 10^{14}\)</span></em></td>
+<td style="text-align: center;"><span class="math inline">\(\approx
+1.193 \times 10^{14}\)</span> (Est.)</td>
 <td style="text-align: center;"><span class="math inline">\(3.99 \times
 10^{21}\)</span></td>
-<td style="text-align: center;"><strong><span
-class="math inline">\(46,379,493,576,648\)</span></strong></td>
+<td style="text-align: center;"><strong>46,379,493,576,648</strong></td>
 <td style="text-align: center;"><strong>86,199,608x
 tighter</strong></td>
 </tr>
 </tbody>
 </table>
-<h4 id="empirical-ratio-convergence-the-n20-frontier">3. Empirical Ratio
+<h3 id="empirical-ratio-convergence-the-n20-frontier">3. Empirical Ratio
 Convergence &amp; The <span class="math inline">\(n=20\)</span>
-Frontier</h4>
-<p>Comparing exact orbit counts against the tight analytical bound <span
-class="math inline">\(\frac{(2n)!}{2^{n+3} n^{n+1}}\)</span>, the ratio
-<span class="math inline">\(\chi_n / T(n)\)</span> converges rapidly to
-the asymptotic constant: <span
+Frontier</h3>
+<p>Comparing exact orbit counts against the tight bound <span
+class="math inline">\(T(n) = \frac{(2n)!}{2^{n+3} n^{n+1}}\)</span>, the
+ratio <span class="math inline">\(\chi_n / T(n)\)</span> converges
+rapidly to the asymptotic constant: <span
 class="math display">\[\frac{\chi_n}{T(n)} \longrightarrow \mathbf{2.572
 \pm 0.001}\]</span></p>
 <ul>
@@ -485,16 +535,50 @@ class="math inline">\(2.5742\)</span></li>
 <li><span class="math inline">\(n=17\)</span>: <span
 class="math inline">\(2.5717\)</span></li>
 </ul>
-<p>Applying this asymptotic constant to <span
-class="math inline">\(T(20) = \frac{40!}{2^{23} \cdot 20^{21}} =
-46,379,414,200,595\)</span> predicts: <span
-class="math display">\[\chi_{20} \approx 2.572 \times T(20) \approx
-\mathbf{1.193 \times 10^{14}} \quad (\approx \mathbf{119.3 \text{
-trillion canonical orbits}})\]</span></p>
-<h4 id="solver-performance-distributed-sharding">4. Solver Performance
-&amp; Distributed Sharding</h4>
-<p>Benchmarks for the compiled Rust solver running on a standard
-multi-core workstation:</p>
+<p>Applying this constant to <span class="math inline">\(T(20) =
+\frac{40!}{2^{23} \cdot 20^{21}} = 46,379,414,200,595\)</span> predicts:
+<span class="math display">\[\chi_{20} \approx 2.572 \times T(20)
+\approx \mathbf{1.193 \times 10^{14}} \quad (\approx \mathbf{119.3
+\text{ trillion canonical orbits}})\]</span></p>
+<hr />
+<h2 id="building-running-the-rust-solver">Building &amp; Running the
+Rust Solver</h2>
+<p>A high-performance multi-threaded solver in Rust is provided in the
+<code>solver/</code> directory.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Rust toolchain:
+<code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code></li>
+</ul>
+<h3 id="quick-start">Quick Start</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build the release binary</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> solver</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">cargo</span> build <span class="at">--release</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Count canonical dihedral orbits for n=8</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">cargo</span> run <span class="at">--release</span> <span class="at">--</span> <span class="at">-n</span> 8</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Enumerate all canonical solutions for n=9 as Base36 strings</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">cargo</span> run <span class="at">--release</span> <span class="at">--</span> <span class="at">-n</span> 9 <span class="at">-f</span> base36</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Display analytical bounds comparison for n=16</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">cargo</span> run <span class="at">--release</span> <span class="at">--</span> <span class="at">-n</span> 16 <span class="at">--bound</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Export solutions to a JSON file using 8 threads</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ex">cargo</span> run <span class="at">--release</span> <span class="at">--</span> <span class="at">-n</span> 12 <span class="at">-t</span> 8 <span class="at">-f</span> json <span class="at">-o</span> solutions_n12.json</span></code></pre></div>
+<h3 id="cli-command-options">CLI Command Options</h3>
+<pre class="text"><code>Options:
+  -n, --n &lt;N&gt;              Number of chords n (e.g. 1, 4, 5, 8, 9, 12, 13, 16, 17, 20)
+  -g, --group &lt;GROUP&gt;      Symmetry group [default: dihedral] [possible values: dihedral, cyclic, none]
+  -f, --format &lt;FORMAT&gt;    Output format [default: count] [possible values: count, base36, chords, json, b-file]
+  -t, --threads &lt;THREADS&gt;  Number of worker threads (default: all CPU cores)
+      --shard &lt;M/N&gt;        Distributed sharding in format M/N (e.g. 1/16, 2/16)
+  -b, --bound              Display analytical bounds (flabby vs tight)
+  -o, --output &lt;FILE&gt;      Output destination file path (default: stdout)</code></pre>
+<h3 id="measured-performance-benchmarks">Measured Performance
+Benchmarks</h3>
+<p>Running on a standard multi-core workstation:</p>
 <table>
 <colgroup>
 <col style="width: 25%" />
@@ -508,8 +592,8 @@ multi-core workstation:</p>
 class="math inline">\(n\)</span></th>
 <th style="text-align: center;">Canonical Orbits <span
 class="math inline">\(\chi_n\)</span></th>
-<th style="text-align: center;">Solver Speed</th>
-<th style="text-align: center;">Total Compute Time</th>
+<th style="text-align: center;">Solver Throughput</th>
+<th style="text-align: center;">Measured Execution Time</th>
 </tr>
 </thead>
 <tbody>
@@ -557,8 +641,8 @@ class="math inline">\(\chi_n\)</span></th>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"><strong>20</strong></td>
-<td style="text-align: center;"><em>Est. <span
-class="math inline">\(\approx 1.193 \times 10^{14}\)</span></em></td>
+<td style="text-align: center;"><span class="math inline">\(\approx
+1.193 \times 10^{14}\)</span> (Est.)</td>
 <td style="text-align: center;"><span class="math inline">\(\approx 5.0
 \times 10^5\)</span> sol/s</td>
 <td style="text-align: center;"><span class="math inline">\(\approx
@@ -569,27 +653,12 @@ class="math inline">\(\approx 1.193 \times 10^{14}\)</span></em></td>
 </table>
 <p>Because the solver operates in <span
 class="math inline">\(O(1)\)</span> stack memory with zero cross-thread
-communication, large computations can be trivially partitioned across
-distributed cloud nodes using the <code>--shard &lt;M/N&gt;</code> flag
-(e.g. <code>cyclic-skolem-solver -n 20 --shard 1/1000 ...</code>).</p>
-<p>Empirically, the number of solutions <span
-class="math inline">\(\chi_n\)</span> vanishes relative to the total
-space of chord diagrams <span class="math inline">\(M(n)\)</span>. The
-ratio <span class="math inline">\(\frac{\chi_n}{M(n)}\)</span> drops by
-approximately two orders of magnitude for every increment of 4 in <span
-class="math inline">\(n\)</span>:</p>
-<ul>
-<li><span class="math inline">\(n=4\)</span>: ~1 in 100</li>
-<li><span class="math inline">\(n=8\)</span>: ~1 in 10,000</li>
-<li><span class="math inline">\(n=12\)</span>: ~1 in 1,000,000</li>
-<li><span class="math inline">\(n=16\)</span>: ~1 in 100,000,000</li>
-</ul>
-<p>While Skolem sequences form an infinitesimally small fraction of all
-asymmetric diagrams as <span class="math inline">\(n \to
-\infty\)</span>, individual instances remain tractable to find. For
-example, here are several valid sequences of length 36 (<span
-class="math inline">\(n=18\)</span>, length profile <span
-class="math inline">\(1..18\)</span>):</p>
+communication, large computations can be partitioned across distributed
+cloud nodes using the <code>--shard &lt;M/N&gt;</code> flag
+(e.g. <code>cargo run --release -- -n 20 --shard 1/1000</code>).</p>
+<hr />
+<h2 id="base36-sample-solutions-n18-length-36">Base36 Sample Solutions
+(<span class="math inline">\(n=18\)</span>, length 36)</h2>
 <pre><code>001q1pytfmdwilxr4jan64vohuk6gaqpmczl3s5b3yhe5gckotwbx8v7u2er2987fisndjz9
 004b96vgplusmqje5xw8z35c73ft8nel7yjmcrvosufh2dk21a1winpxztqdahgbor9ky46i
 00546bwd5stpyoli1b1v7dz9rhuj7xegm9fklpswtn3hqe3jgyfarc8mkuzvo2a82ncxi64q
@@ -601,10 +670,6 @@ class="math inline">\(1..18\)</span>):</p>
 00fxpdsl92y527jcv59dh7wzo3tic3pbrk6gqxhun6mb8yievsa4g8kw4lfzraeqnmj1t1uo
 00k7e1z1fl4qsnj4wu5extvc56r3bga36iy2cp28bazdomgh8w9tikxsqdul9nvpfhj7mory</code></pre>
 <p>where alphanumeric characters <code>0</code>..<code>z</code> encode
-distance values <span class="math inline">\(0\dots 35\)</span>. With the
-new tight analytical bound <span
-class="math inline">\(\frac{(2n)!}{2^{n+3} n^{n+1}}\)</span>, the search
-space ceiling is rigorously constrained across all orders <span
-class="math inline">\(n\)</span>.</p>
+distance values <span class="math inline">\(0\dots 35\)</span>.</p>
 </body>
 </html>
