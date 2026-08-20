@@ -44,7 +44,7 @@ To canonicalize a solution with regard to its $4n$ rotations and reflections (co
 
 The condition $n \equiv 0, 1 \pmod 4$ is necessary for the existence of such a sequence (similar to linear Skolem sequences). Thus valid orders are $n = 1, 4, 5, 8, 9, 12, 13, 16, 17, 20, \dots$.
 
-| $n$ | $M(n)$ (All Matchings) | $B(n)$ (OEIS A054499) | $R_{|G|}(n)$ (Asymmetric) | $\chi_n$ (Skolem Orbits) |
+| $n$ | $M(n)$ (All Matchings) | $B(n)$ (OEIS A054499) | $R_{\vert G\vert}(n)$ (Asymmetric) | $\chi_n$ (Skolem Orbits) |
 | ---: | ---: | ---: | ---: | ---: |
 | **1** | 1 | 1 | - | 1 |
 | **4** | 105 | 17 | 1 | 1 |
