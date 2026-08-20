@@ -179,3 +179,5 @@ While Skolem sequences form an infinitesimally small fraction of all asymmetric 
 
 where alphanumeric characters `0`..`z` encode distance values $0\dots 35$.
 
+It has not escaped the author's notice that the strictly distinct cyclic pairings exhibited by these sequences immediately suggest a possible mechanism for human-auditable, tamper-evident encoding, optical orthogonal pulse timing, and conflict-free cyclic scheduling.
+
