@@ -164,6 +164,8 @@ Because the solver operates in $O(1)$ stack memory with zero cross-thread commun
 
 ## Base36 Sample Solutions ($n=18$, length 36)
 
+While Skolem sequences form an infinitesimally small fraction of all asymmetric diagrams as $n \to \infty$ (the probability of finding a cyclic Skolem sequence within any unrestricted superset is effectively zero), individual instances remain inexpensive and tractable to find with the solver. For example, here are several valid sequences of length 36 ($n=18$, chord distance profile $1\dots 18$):
+
     001q1pytfmdwilxr4jan64vohuk6gaqpmczl3s5b3yhe5gckotwbx8v7u2er2987fisndjz9
     004b96vgplusmqje5xw8z35c73ft8nel7yjmcrvosufh2dk21a1winpxztqdahgbor9ky46i
     00546bwd5stpyoli1b1v7dz9rhuj7xegm9fklpswtn3hqe3jgyfarc8mkuzvo2a82ncxi64q
@@ -176,3 +178,4 @@ Because the solver operates in $O(1)$ stack memory with zero cross-thread commun
     00k7e1z1fl4qsnj4wu5extvc56r3bga36iy2cp28bazdomgh8w9tikxsqdul9nvpfhj7mory
 
 where alphanumeric characters `0`..`z` encode distance values $0\dots 35$.
+
